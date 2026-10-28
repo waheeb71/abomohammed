@@ -15,6 +15,14 @@
 كل روابط canonical و`sitemap.xml` و`og:url` تُبنى من `domain` في `site.config.json`.
 إذا نشرت على نطاق مختلف يجب تحديثه، وإلا أشارت الصفحات إلى عنوان غير موجود.
 
+**يجب أن تكون قيمة `SITE_DOMAIN` رابطًا كاملًا** مثل:
+
+```
+SITE_DOMAIN=https://abo-mohammeed.netlify.app
+```
+
+ولا تكتب اسم الموقع وحده (`abo-mohammeed`) — هذا ينتج روابط بلا `https://` ولا نطاق، وترفضها Google Search Console كعناوين غير صالحة. البناء الآن يتحقق من القيمة: إن كانت غير صالحة يتجاهلها ويستخدم `domain` من `site.config.json` مع تحذير في السجل.
+
 الطريقة الأسهل: اضبط `SITE_DOMAIN` عند البناء:
 
 ```bash

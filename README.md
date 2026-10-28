@@ -115,6 +115,8 @@ npm run check
 
 المستودع: `https://github.com/waheeb71/abomohammed` (خاص — GitHub Pages المجاني لا يعمل معه).
 
+الموقع المنشور حاليًا: `https://abo-mohammeed.netlify.app`
+
 الموقع جاهز في `dist/` و`dist.zip`، مع إعدادات جاهزة لـ Netlify وCloudflare Pages:
 
 - `netlify.toml` — أمر البناء ومجلد النشر.

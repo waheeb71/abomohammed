@@ -11,9 +11,34 @@ const ROOT = process.cwd();
 const SRC = path.join(ROOT, "src");
 const PAGES = path.join(SRC, "pages");
 const config = JSON.parse(await fs.readFile(path.join(ROOT, "site.config.json"), "utf8"));
+
 // يسمح لخدمة الاستضافة بضبط النطاق دون تعديل الملف:
 // SITE_DOMAIN=https://example.com npm run build
-if (process.env.SITE_DOMAIN) config.domain = process.env.SITE_DOMAIN.trim();
+function normalizeDomain(value) {
+  let d = String(value || "").trim().replace(/\/+$/, "");
+  if (!/^https?:\/\//i.test(d)) d = "https://" + d;
+  return d;
+}
+function isValidDomain(d) {
+  try {
+    const u = new URL(d);
+    return /^https?:$/.test(u.protocol) && u.hostname.includes(".");
+  } catch {
+    return false;
+  }
+}
+if (process.env.SITE_DOMAIN) {
+  const envDomain = normalizeDomain(process.env.SITE_DOMAIN);
+  if (isValidDomain(envDomain)) {
+    config.domain = envDomain;
+  } else {
+    console.warn(
+      `⚠ SITE_DOMAIN غير صالح: "${process.env.SITE_DOMAIN}" — يجب أن يكون رابطًا كاملًا مثل https://name.netlify.app. سيُستخدم ${config.domain}`
+    );
+  }
+}
+config.domain = normalizeDomain(config.domain);
+
 const projects = JSON.parse(await fs.readFile(path.join(SRC, "data", "projects.json"), "utf8"));
 const services = JSON.parse(await fs.readFile(path.join(SRC, "data", "services.json"), "utf8"));
 
