@@ -18,14 +18,14 @@
 الطريقة الأسهل: اضبط `SITE_DOMAIN` عند البناء:
 
 ```bash
-SITE_DOMAIN=https://your-site.netlify.app npm run build
+SITE_DOMAIN=https://abo-mohammeed.netlify.app npm run build
 npm run package
 ```
 
 أو في PowerShell:
 
 ```powershell
-$env:SITE_DOMAIN = "https://your-site.netlify.app"
+$env:SITE_DOMAIN = "https://abo-mohammeed.netlify.app"
 npm run build
 npm run package
 ```
@@ -108,4 +108,4 @@ npm run package
 
 GitHub Pages المجاني لا يعمل مع المستودعات الخاصة. إذا رقّيت الحساب إلى Pro لاحقًا فيمكن تفعيله من
 **Settings → Pages → Deploy from a branch → main / (root)**، لكن في هذه الحالة استخدم
-`SITE_DOMAIN=https://waheeb71.github.io/abomohammed` أو أعد `domain` في `site.config.json` إلى رابط GitHub.
+`SITE_DOMAIN=https://abo-mohammeed.netlify.app` أو أعد `domain` في `site.config.json` إلى رابط GitHub.

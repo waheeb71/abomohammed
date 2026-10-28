@@ -125,7 +125,7 @@ npm run check
 
 ```bash
 # بعد معرفة رابط الاستضافة
-SITE_DOMAIN=https://your-site.netlify.app npm run build
+SITE_DOMAIN=https://abo-mohammeed.netlify.app npm run build
 npm run package
 ```
 

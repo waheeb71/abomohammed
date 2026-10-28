@@ -9,7 +9,7 @@
 - [x] `phoneDisplay` — بصيغة `05xxxxxxxx` (الحالي: `0579305750`).
 - [x] `phoneE164` — بصيغة `+9665xxxxxxxx` (الحالي: `+966579305750`).
 - [x] `whatsapp` — بصيغة `9665xxxxxxxx` (الحالي: `966579305750`).
-- [x] `domain` — النطاق النهائي بلا شرطة مائلة أخيرة (الحالي: `https://waheeb71.github.io/abomohammed`).
+- [x] `domain` — النطاق النهائي بلا شرطة مائلة أخيرة (الحالي: `https://abo-mohammeed.netlify.app`).
 - [ ] `address.street` و`address.district` و`address.postalCode` — العنوان الحقيقي أو عنوان بديل واضح (المضبوط حاليًا: الرياض فقط).
 - [x] `geo.lat` و`geo.lng` — إحداثيات الموقع من خرائط جوجل (`24.638996, 46.744294`).
 - [x] `mapsUrl` — رابط المشاركة الفعلي.
@@ -71,7 +71,7 @@ npm run check
 **GitHub Pages (المستخدم حاليًا)**
 1. ارفع المشروع إلى `https://github.com/waheeb71/abomohammed` (الفرع `main`).
 2. **Settings → Pages → Deploy from a branch** ثم `main` و`/ (root)`.
-3. الموقع سيكون على `https://waheeb71.github.io/abomohammed/` — وهو نفس `domain` في `site.config.json`.
+3. الموقع سيكون على `https://abo-mohammeed.netlify.app/` — وهو نفس `domain` في `site.config.json`.
 4. ملف `.nojekyll` موجود في الجذر.
 
 **Netlify / Vercel / Cloudflare Pages**
