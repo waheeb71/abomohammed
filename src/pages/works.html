@@ -1,0 +1,89 @@
+---
+title: أعمالنا | صور زجاج سكريت وواجهات ودرابزين في الرياض
+desc: معرض صور لأعمالنا في الرياض: واجهات زجاجية، درابزين وحواجز، أبواب وقواطع، مرايا وشاورات. صور من مشاريع منفّذة وأثناء التنفيذ.
+nav: works
+priority: "0.8"
+updated: 2026-10-28
+---
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <ul class="breadcrumbs">
+        <li><a href="{{BASE}}">الرئيسية</a></li>
+        <li aria-current="page">أعمالنا</li>
+      </ul>
+      <h1>أعمالنا في الرياض</h1>
+      <p>56 صورة من مشاريع الزجاج والألمنيوم: واجهات، درابزين، حواجز أسطح، أبواب محلات، قواطع، مرايا وشاورات. بعض الصور أثناء التنفيذ لأننا نشارك العمل كما هو، لا كما يبدو بعد التجميل.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="gallery-filters" role="group" aria-label="تصفية الأعمال حسب النوع">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">الكل</button>
+        <button class="chip" type="button" data-filter="railings" aria-pressed="false">درابزين زجاج</button>
+        <button class="chip" type="button" data-filter="balustrades" aria-pressed="false">حواجز وأسطح</button>
+        <button class="chip" type="button" data-filter="facades" aria-pressed="false">واجهات زجاجية</button>
+        <button class="chip" type="button" data-filter="doors" aria-pressed="false">أبواب ومحلات</button>
+        <button class="chip" type="button" data-filter="partitions" aria-pressed="false">قواطع</button>
+        <button class="chip" type="button" data-filter="mirrors" aria-pressed="false">مرايا</button>
+        <button class="chip" type="button" data-filter="showers" aria-pressed="false">شاور</button>
+      </div>
+
+      <div class="gallery">
+        {{GALLERY}}
+      </div>
+
+      <div class="notice" style="margin-top:2.5rem">
+        <svg width="20" height="20" aria-hidden="true"><use href="#i-ruler"/></svg>
+        <div>صور المشاريع تُنشر بموافقة أصحابها وبهدف توضيح نوع العمل، وقد تختلف التفاصيل والمواد حسب الموقع. إذا أعجبك عمل معيّن، أرسله لنا على واتساب ونوضح لك ما يمكن تنفيذه في مكانك.</div>
+      </div>
+    </div>
+  </section>
+
+  {{CTA_BAND}}
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عارض صور الأعمال" aria-hidden="true">
+  <div class="lightbox__stage">
+    <img src="" alt="">
+    <button class="lightbox__close" type="button" aria-label="إغلاق العارض">
+      <svg width="22" height="22" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="الصورة السابقة">
+      <svg width="22" height="22" aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-chevron"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="الصورة التالية">
+      <svg width="22" height="22" aria-hidden="true"><use href="#i-chevron"/></svg>
+    </button>
+  </div>
+  <div class="lightbox__bar">
+    <span data-lb-caption></span>
+    <span data-lb-count></span>
+    <a data-lb-link href="{{BASE}}contact.html">اطلب مشروعًا مشابهًا</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "{{DOMAIN}}/works.html#page",
+      "name": "أعمال الزجاج والألمنيوم في الرياض",
+      "url": "{{DOMAIN}}/works.html",
+      "inLanguage": "ar-SA",
+      "isPartOf": { "@id": "{{DOMAIN}}/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "{{DOMAIN}}/" },
+        { "@type": "ListItem", "position": 2, "name": "أعمالنا", "item": "{{DOMAIN}}/works.html" }
+      ]
+    }
+  ]
+}
+</script>

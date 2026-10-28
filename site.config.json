@@ -1,0 +1,26 @@
+{
+  "brand": "أبو محمد للزجاج والألمنيوم",
+  "brandShort": "أبو محمد",
+  "tagline": "زجاج سكريت وألمنيوم وواجهات في الرياض",
+  "phoneDisplay": "0579305750",
+  "phoneE164": "+966579305750",
+  "whatsapp": "966579305750",
+  "domain": "https://waheeb71.github.io/abomohammed",
+  "city": "الرياض",
+  "address": {
+    "street": "الرياض",
+    "district": "",
+    "region": "منطقة الرياض",
+    "postalCode": "",
+    "country": "SA"
+  },
+  "geo": { "lat": 24.638996, "lng": 46.744294 },
+  "hours": [
+    { "days": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": "00:00", "close": "23:59" }
+  ],
+  "mapsUrl": "https://maps.app.goo.gl/8FKKew37S3zSpnEKA",
+  "gbpUrl": "",
+  "priceRange": "SAR",
+  "social": [],
+  "founded": ""
+}
