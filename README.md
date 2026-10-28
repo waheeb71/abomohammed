@@ -111,21 +111,23 @@ npm run check
 
 ---
 
-## النشر على GitHub Pages
+## النشر
 
-المستودع: `https://github.com/waheeb71/abomohammed`
+المستودع: `https://github.com/waheeb71/abomohammed` (خاص — GitHub Pages المجاني لا يعمل معه).
 
-النطاق الحالي المضبوط في `site.config.json`:
-`https://waheeb71.github.io/abomohammed`
+الموقع جاهز في `dist/` و`dist.zip`، مع إعدادات جاهزة لـ Netlify وCloudflare Pages:
 
-1. ارفع المشروع إلى الفرع `main` (الملفات المبنية موجودة في جذر المشروع).
-2. من المستودع: **Settings → Pages → Build and deployment**.
-3. اختر **Deploy from a branch** ثم `main` والمجلد `/ (root)`، واحفظ.
-4. انتظر دقيقة، ثم افتح `https://waheeb71.github.io/abomohammed/`.
+- `netlify.toml` — أمر البناء ومجلد النشر.
+- `_headers` — تخزين مؤقت ورؤوس أمان.
+- `SITE_DOMAIN` — متغير بيئة يضبط النطاق في canonical وsitemap وSchema.
 
-ملف `.nojekyll` موجود حتى لا يعالج GitHub الصفحات بـ Jekyll.
+الخطوات الكاملة (Netlify، Cloudflare، cPanel) في [`docs/DEPLOY.md`](docs/DEPLOY.md).
 
-لأي استضافة أخرى: `npm run package` ثم ارفع محتويات `dist/`. التفاصيل الكاملة (DNS، HTTPS، Search Console، إعادة التوجيه) في `docs/LAUNCH-CHECKLIST.md`.
+```bash
+# بعد معرفة رابط الاستضافة
+SITE_DOMAIN=https://your-site.netlify.app npm run build
+npm run package
+```
 
 **قبل أي تغيير:** بيانات الاتصال والموقع في `site.config.json` هي المصدر الوحيد. بعد تعديلها شغّل `npm run build && npm run check`.
 

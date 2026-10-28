@@ -11,6 +11,9 @@ const ROOT = process.cwd();
 const SRC = path.join(ROOT, "src");
 const PAGES = path.join(SRC, "pages");
 const config = JSON.parse(await fs.readFile(path.join(ROOT, "site.config.json"), "utf8"));
+// يسمح لخدمة الاستضافة بضبط النطاق دون تعديل الملف:
+// SITE_DOMAIN=https://example.com npm run build
+if (process.env.SITE_DOMAIN) config.domain = process.env.SITE_DOMAIN.trim();
 const projects = JSON.parse(await fs.readFile(path.join(SRC, "data", "projects.json"), "utf8"));
 const services = JSON.parse(await fs.readFile(path.join(SRC, "data", "services.json"), "utf8"));
 

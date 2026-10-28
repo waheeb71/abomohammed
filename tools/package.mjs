@@ -11,7 +11,7 @@ const DIST = path.join(ROOT, "dist");
 await fs.rm(DIST, { recursive: true, force: true });
 await fs.mkdir(DIST, { recursive: true });
 
-const files = ["favicon.svg", "site.webmanifest", "robots.txt", "sitemap.xml"];
+const files = ["favicon.svg", "site.webmanifest", "robots.txt", "sitemap.xml", "_headers"];
 const dirs = ["assets", "services", "blog"];
 
 for (const f of files) {
